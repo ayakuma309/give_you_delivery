@@ -81,3 +81,5 @@ group :test do
   gem 'webdrivers'
 end
 gem 'sorcery'
+gem 'rails-i18n'
+gem 'enum_help'
