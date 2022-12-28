@@ -10,7 +10,6 @@ ja:
     search: '検索'
     show: '詳細'
     delete: '削除'
-    
     message:
       updated: "%{item}を更新しました"
       not_updated: "%{item}を更新できませんでした"
