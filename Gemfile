@@ -89,3 +89,6 @@ gem 'config'
 
 # APIを環境変数化
 gem 'dotenv-rails'
+
+#csv読み込み
+gem "activerecord-import"
