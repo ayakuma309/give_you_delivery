@@ -11,9 +11,12 @@
         <%= f.password_field :password, class: 'shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline',placeholder: "******"%>
       </div>
       <div class="flex items-center justify-between">
-        <%= f.submit  t('defaults.register') , class:"bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"%>
+        <%= f.submit  t('defaults.register') , class:"btn-primary hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"%>
         <%= link_to '新規登録' ,new_user_path , class: 'inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800' %>
       </div>
+      <%= link_to auth_at_provider_path(provider: :twitter), class: 'btn   w-100 btn-primary my-2' do %>
+        Twitterでログイン
+      <% end %>
     <% end %>
   </div>
 </div>
