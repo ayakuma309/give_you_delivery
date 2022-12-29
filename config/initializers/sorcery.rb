@@ -80,7 +80,7 @@ Rails.application.config.sorcery.configure do |config|
   # i.e. [:twitter, :facebook, :github, :linkedin, :xing, :google, :liveid, :salesforce, :slack, :line].
   # Default: `[]`
   #
-  # config.external_providers =
+  config.external_providers = [:twitter]
 
   # You can change it by your local ca_file. i.e. '/etc/pki/tls/certs/ca-bundle.crt'
   # Path to ca_file. By default use a internal ca-bundle.crt.
@@ -106,8 +106,15 @@ Rails.application.config.sorcery.configure do |config|
   # For information about XING API:
   # - user info fields go to https://dev.xing.com/docs/get/users/me
   #
-  # config.xing.key = ""
-  # config.xing.secret = ""
+  config.twitter.key = Rails.application.credentials.dig(:twitter, :key)
+  config.twitter.secret = Rails.application.credentials.dig(:twitter, :secret_key)
+  config.twitter.callback_url = Settings.sorcery[:callback_url]
+  config.twitter.user_info_path = "/1.1/account/verify_credentials.json?include_email=true"
+
+  config.twitter.user_info_mapping = {
+    email: 'email',
+    name: 'name',
+  }
   # config.xing.callback_url = "http://0.0.0.0:3000/oauth/callback?provider=xing"
   # config.xing.user_info_mapping = {first_name: "first_name", last_name: "last_name"}
   #
@@ -226,7 +233,7 @@ Rails.application.config.sorcery.configure do |config|
   # config.line.bot_prompt = "normal"
   # config.line.user_info_mapping = {name: 'displayName'}
 
-  
+
   # For information about Discord API
   # https://discordapp.com/developers/docs/topics/oauth2
   # config.discord.key = "xxxxxx"
@@ -543,7 +550,7 @@ Rails.application.config.sorcery.configure do |config|
     # Class which holds the various external provider data for this user.
     # Default: `nil`
     #
-    # user.authentications_class =
+    user.authentications_class = Authentication
 
     # User's identifier in the `authentications` class.
     # Default: `:user_id`
