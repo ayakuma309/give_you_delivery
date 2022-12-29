@@ -80,3 +80,12 @@ group :test do
   gem 'selenium-webdriver'
   gem 'webdrivers'
 end
+gem 'rails-i18n'
+gem 'enum_help'
+
+# Authentication
+gem 'sorcery'
+gem 'config'
+
+# APIを環境変数化
+gem 'dotenv-rails'
