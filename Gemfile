@@ -80,6 +80,8 @@ group :test do
   gem 'selenium-webdriver'
   gem 'webdrivers'
 end
-gem 'sorcery'
 gem 'rails-i18n'
 gem 'enum_help'
+
+gem 'sorcery'
+gem 'config'
