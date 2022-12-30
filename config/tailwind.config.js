@@ -25,11 +25,11 @@ module.exports = {
     themes: [
       {
         mytheme: {
-          primary: "#42A0FF",
-          secondary:  "#81D0CB",
-          accent: "#7dd3fc",
+          primary: "#FAB4B5",
+          secondary:  "#F8D1D9",
+          accent: "#DF3419",
           neutral: "#191A3E",
-          warning: "#fecaca",
+          warning: "#fb7185",
           info: "#FFDC5D",
           success: "#fef08a",
           "base-100": "#ffffff",
