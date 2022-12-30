@@ -1,5 +1,10 @@
-<%= render 'items/item_delivery', item: @item%>
-<%= @delivery.addressee %>
-<br>
-<%= @delivery.addresser %>
-<%= simple_format(@delivery.comment) %>
+<!--ここでloginしてたら一覧へ戻る、ログインしてなかったらあなたも差し入れしてみるボタンを表示する-->
+<div class="card card-side bg-base-100 shadow-xl my-2">
+  <%=image_tag @delivery.item.image %>
+  <div class="card-body">
+    <h2 class="card-title"><%= @delivery.addressee %>さん</h2>
+    <p><%= simple_format(@delivery.comment) %></p>
+    <div class="font-bold"><%= @delivery.item.name %></div>
+    <p>はマダカミアナッツコンビニにて引き換えしてください</p>
+  </div>
+</div>

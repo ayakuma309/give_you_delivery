@@ -1,2 +1,7 @@
-<%= render 'item_delivery', item: @item%>
+<div class="container mx-auto shadow-lg rounded-lg max-w-md hover:shadow-2xl transition duration-300">
+  <%=image_tag @item.image ,class: "w-auto mx-auto rounded-full object-cover object-center" %>
+  <div class="p-6">
+    <h1 class="md:text-1xl text-xl hover:text-secondary transition duration-200  font-bold text-gray-900 "><%= @item.name %></h1>
+  </div>
+</div>
 <%= render 'form'%>

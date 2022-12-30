@@ -5,7 +5,6 @@ class DeliveriesController < ApplicationController
 
   def show
     @delivery = current_user.deliveries.find(params[:id])
-    @item = Item.find_by(id: @delivery.item_id)
   end
 
   def create
