@@ -6,17 +6,17 @@
         <%= f.hidden_field :item_id, value: @item.id %>
         <div>
           <%= f.label :addressee , class: "inline-block text-gray-800 text-sm sm:text-base mb-2"%>
-          <%= f.text_field :addressee, class: "w-full bg-gray-50 text-gray-800 border focus:ring ring-indigo-300 rounded outline-none transition duration-100 px-3 py-2", required: true %>
+          <%= f.text_field :addressee, class: "w-full bg-gray-50 text-gray-800 border focus:ring ring-indigo-300 rounded outline-none transition duration-100 px-3 py-2",placeholder: "相手のお名前  (例: トリッキーさん)", required: true %>
         </div>
         <div>
           <%= f.label :addresser, class: "inline-block text-gray-800 text-sm sm:text-base mb-2" %>
-          <%= f.text_field :addresser, value: current_user&.name, class: "w-full bg-gray-50 text-gray-800 border focus:ring ring-indigo-300 rounded outline-none transition duration-100 px-3 py-2", required: true %>
+          <%= f.text_field :addresser, value: current_user&.name, class: "w-full bg-gray-50 text-gray-800 border focus:ring ring-indigo-300 rounded outline-none transition duration-100 px-3 py-2",placeholder: "あなたのお名前" , required: true%>
         </div>
         <div class="sm:col-span-2">
           <%= f.label :comment , class: "inline-block text-gray-800 text-sm sm:text-base mb-2"%>
-          <%= f.text_area :comment, class: "w-full h-64 bg-gray-50 text-gray-800 border focus:ring ring-indigo-300 rounded outline-none transition duration-100 px-3 py-2", required: true %>
+          <%= f.text_field :comment, class: "w-full h-64 bg-gray-50 text-gray-800 border focus:ring ring-indigo-300 rounded outline-none transition duration-100 px-3 py-2", placeholder: "100文字以内で入力してください", required: true%>
         </div>
-        <div class="sm:col-span-2 flex justify-between items-center">
+        <div class="sm:col-span-2 flex justify-between items-center my-2">
           <%= f.submit class: 'btn btn-primary'%>
         </div>
     <% end %>
