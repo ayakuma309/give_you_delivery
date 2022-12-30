@@ -1,0 +1,5 @@
+<%= render 'items/item_delivery', item: @item%>
+<%= @delivery.addressee %>
+<br>
+<%= @delivery.addresser %>
+<%= simple_format(@delivery.comment) %>
