@@ -14,7 +14,8 @@ class DeliveriesController < ApplicationController
       redirect_to delivery_path(@delivery), success: t('defaults.message.created', item: Delivery.model_name.human)
     else
       flash.now[:danger] = t('defaults.message.not_created', item: Delivery.model_name.human)
-      render :index
+      @items = Item.all
+      render 'items/index'
     end
   end
 
