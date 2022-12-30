@@ -11,9 +11,9 @@ ja:
         password_confirmation: 'パスワード確認'
         name: '名前'
       delivery:
-        comment: '一言'
+        comment: 'メッセージ'
         addressee: '差し入れしたい人'
-        addresser: '差出人'
+        addresser: 'あなたのお名前'
   attributes:
     id: 'ID'
     created_at: '作成日時'
