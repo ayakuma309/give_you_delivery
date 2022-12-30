@@ -1,10 +1,27 @@
 <!--ここでloginしてたら一覧へ戻る、ログインしてなかったらあなたも差し入れしてみるボタンを表示する-->
-<div class="card card-side bg-base-100 shadow-xl my-2">
-  <%=image_tag @delivery.item.image %>
-  <div class="card-body">
-    <h2 class="card-title"><%= @delivery.addressee %>さん</h2>
-    <p><%= simple_format(@delivery.comment) %></p>
-    <div class="font-bold"><%= @delivery.item.name %></div>
-    <p>はマダカミアナッツコンビニにて引き換えしてください</p>
+<div class="mx-auto w-80">
+  <div class="card card-side bg-base-100 shadow-xl my-2">
+    <%=image_tag @delivery.item.image %>
+    <div class="card-body">
+      <h2 class="card-title"><%= @delivery.addressee %></h2>
+      <p class= "my-2">
+        <span class= "font-bold"><%= @delivery.addresser %>さんから</span><br>
+        <%= @delivery.item.name %><br>
+        の差し入れです<br>
+        メッセージも届いてます。
+      </p>
+    </div>
   </div>
 </div>
+<div class="text-center">
+  <div class="balloon">
+    <p class="font-bold text-xs">
+      <%= @delivery.comment %>
+    </p>
+  </div>
+  <div class="font-bold text-center">
+    <%=image_tag 'logo.png', class: "mx-auto",size: "100x100"%>
+    <%= @delivery.addresser %>より
+  </div>
+</div>
+
