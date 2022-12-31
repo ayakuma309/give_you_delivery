@@ -14,7 +14,8 @@
         </div>
         <div class="sm:col-span-2">
           <%= f.label :comment , class: "inline-block text-gray-800 text-sm sm:text-base mb-2"%>
-          <%= f.text_field :comment, class: "w-full h-64 bg-gray-50 text-gray-800 border focus:ring ring-indigo-300 rounded outline-none transition duration-100 px-3 py-2", placeholder: "100文字以内で入力してください", required: true%>
+          <p id="word-count" class= "text-accent">残り100文字</p>
+          <%= f.text_area :comment, class: "w-full h-64 bg-gray-50 text-gray-800 border focus:ring ring-indigo-300 rounded outline-none transition duration-100 px-3 py-2", id: "textarea", placeholder: "100文字以内で入力してください", required: true%>
         </div>
         <div class="sm:col-span-2 flex justify-between items-center my-2">
           <%= f.submit class: 'btn btn-primary'%>
@@ -23,3 +24,9 @@
     </div>
   </div>
 </div>
+<script>
+  document.querySelector(`#textarea`).addEventListener(`keyup`, function () {
+
+  document.querySelector(`#word-count`).textContent = `残り${100 - document.querySelector(`#textarea`).value.length}文字`;
+  })
+</script>
