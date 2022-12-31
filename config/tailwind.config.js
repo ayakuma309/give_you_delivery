@@ -30,7 +30,7 @@ module.exports = {
           accent: "#DF3419",
           neutral: "#616161",
           warning: "#fb7185",
-          info: "#FFDC5D",
+          info: "#fcf0f2",
           success: "#fef08a",
           "base-100": "#ffffff",
           fontFamily: "Chalkboard"

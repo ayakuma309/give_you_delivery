@@ -7,7 +7,7 @@
 <% end %>
 <div class="mx-auto w-80">
   <div class="card card-side bg-base-100 shadow-xl my-2">
-    <%=image_tag @delivery.item.image %>
+    <%=image_tag @delivery.item.image ,class: "rounded-full"%>
     <div class="card-body">
       <h2 class="card-title"><%= @delivery.addressee %></h2>
       <p class= "my-2">

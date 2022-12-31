@@ -15,7 +15,9 @@
  */
 
 
-
+body{
+  background-color: #fcf0f2;
+}
 
 /*吹き出し*/
 .balloon {

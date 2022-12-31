@@ -1,4 +1,13 @@
-<div>
-  <h1 class="font-bold text-4xl">StaticPages#top</h1>
-  <p>Find me in app/views/static_pages/top.html.erb</p>
+<div class="container mx-auto flex justify-center items-center">
+  <div class="sm:col-span-2 p-3.5">
+    <%= image_tag 'logo-image.png', size: '500x500' %>
+      <p class="mt-2 p-3.5 text-primary font-serif text-xl font-bold text-center">
+        応援したい人、疲れてそうな人<br>
+        闇堕ちしてしまった人に<br>
+        (気持ちだけ)差し入れを渡そうというサービスです
+      </p>
+    <div class="sm:col-span-2 p-2  text-center">
+      <%= link_to '差し入れアイテムを探しにいく', items_path, class: 'btn btn-primary', style: 'color: white' %>
+    </div>
+  </div>
 </div>
