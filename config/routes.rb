@@ -12,5 +12,5 @@ Rails.application.routes.draw do
   get "oauth/:provider", to: "oauths#oauth", as: :auth_at_provider
 
   resources :items, only: %i[index show]
-  resources :deliveries, only: %i[index show create update destroy]
+  resources :deliveries, only: %i[index show create edit update destroy]
 end
