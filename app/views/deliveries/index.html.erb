@@ -1,1 +1,12 @@
-<%= render @deliveries %>
+<div class="container">
+  <% if @deliveries.present? %>
+    <%= render @deliveries %>
+  <% else %>
+    <p class= "text-center"><%= t('.no_result') %></p>
+  <% end %>
+  <ul class='crud-menu-btn list-inline text-center my-3'>
+    <li class="list-inline-item">
+      <%= link_to '差し入れしてみる',items_path,class: "btn btn-primary"%>
+    </li>
+  </ul>
+</div>

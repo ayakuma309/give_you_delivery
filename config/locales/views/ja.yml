@@ -36,3 +36,6 @@ ja:
       fail: 'ログインに失敗しました'
     destroy:
       success: 'ログアウトしました'
+  deliveries:
+    index:
+      no_result: '差し入れしたものがありません'
