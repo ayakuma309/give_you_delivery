@@ -1,5 +1,7 @@
 <!--ここでloginしてたら一覧へ戻る、ログインしてなかったらあなたも差し入れしてみるボタンを表示する-->
 <!--ここで書いた本人だったら編集、なかったら保存ボタン(お気に入り)を表示する-->
+<% set_meta_tags title: 'お疲れ様です！', description: "#{@delivery.addresser}さんから差し入れが届いています"%>
+
 <% if logged_in? && current_user.mine?(@delivery) %>
   <%= render 'crud_menus', delivery: @delivery %>
 <% end %>

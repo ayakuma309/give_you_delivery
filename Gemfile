@@ -95,3 +95,6 @@ gem 'dotenv-rails'
 
 # csv読み込み
 gem 'activerecord-import'
+
+# SEO
+gem 'meta-tags'
