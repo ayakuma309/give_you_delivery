@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-	skip_before_action :require_login
+  skip_before_action :require_login
   def new
     @user = User.new
   end
@@ -9,7 +9,7 @@ class UsersController < ApplicationController
     if @user.save
       redirect_to login_path, success: t('.success')
     else
-			flash.now[:danger] = t('.fail')
+      flash.now[:danger] = t('.fail')
       render :new
     end
   end

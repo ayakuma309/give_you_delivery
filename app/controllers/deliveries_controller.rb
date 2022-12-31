@@ -10,6 +10,9 @@ class DeliveriesController < ApplicationController
     @delivery = Delivery.find(params[:id])
   end
 
+  def edit
+  end
+
   def create
     @delivery = current_user.deliveries.new(delivery_params)
     if @delivery.save
@@ -20,8 +23,6 @@ class DeliveriesController < ApplicationController
       render 'items/index'
     end
   end
-
-  def edit; end
 
   def update
     if @delivery.update(delivery_params)
@@ -38,6 +39,7 @@ class DeliveriesController < ApplicationController
   end
 
   private
+
   def set_delivery
     @delivery = current_user.deliveries.find(params[:id])
   end
@@ -45,5 +47,4 @@ class DeliveriesController < ApplicationController
   def delivery_params
     params.require(:delivery).permit(:item_id, :comment, :addressee, :addresser)
   end
-
 end
