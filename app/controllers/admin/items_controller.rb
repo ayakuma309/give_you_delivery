@@ -23,10 +23,14 @@ class Admin::ItemsController < Admin::BaseController
     end
   end
 
-  def edit; end
+  def edit
+    @tag_list = @item.tags.pluck(:name).join(',')
+  end
 
   def update
+    tag_list = params[:item][:tag_name].split(',').uniq
     if @item.update(item_params)
+      @item.save_tags(tag_list)
       redirect_to admin_items_path, success: t('defaults.message.updated', item: Item.model_name.human)
     else
       flash.now[:danger] = t('defaults.message.not_updated', item: Item.model_name.human)
