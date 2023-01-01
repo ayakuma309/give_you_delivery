@@ -98,3 +98,9 @@ gem 'activerecord-import'
 
 # SEO
 gem 'meta-tags'
+
+#ページネーション
+gem 'kaminari'
+
+#検索
+gem 'ransack'
