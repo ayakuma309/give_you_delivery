@@ -19,6 +19,11 @@ ja:
       require_login: 'ログインしてください'
       created: "%{item}を作成しました"
       not_created: "%{item}を作成できませんでした"
+  enums:
+    user:
+      role:
+        general: '一般'
+        admin: '管理者'
   users:
     new:
       title: 'ユーザー登録'
