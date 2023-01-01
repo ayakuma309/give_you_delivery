@@ -13,6 +13,7 @@
         <ul tabindex="0" class="menu menu-conpact dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52 text-left">
           <li><%= link_to 'ダッシュボード', admin_root_path %></li>
           <li><%= link_to 'Item一覧', admin_items_path %></li>
+          <li><%= link_to 'タグ一覧', admin_tags_path %></li>
           <li><%= button_to (t 'defaults.logout'), admin_logout_path, class: 'dropdown-item', method: :delete %></li>
         </ul>
       </div>
@@ -21,6 +22,7 @@
       <ul class="menu menu-horizontal p-0 mr-0 text-sm">
         <li><%= link_to 'TOP', admin_root_path %></li>
         <li><%= link_to 'Item一覧',  admin_items_path %></li>
+        <li><%= link_to 'タグ一覧',  admin_tags_path %></li>
         <li><%= button_to (t 'defaults.logout'), admin_logout_path, method: :delete %></li>
       </ul>
     </div>
