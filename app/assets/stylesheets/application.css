@@ -69,11 +69,7 @@ body{
 /*footer*/
 
 
-footer{
-  position: sticky;
-  top: 100vh;
-  width: 100%;
-}
+
 .footer_balloon{
   position: relative;
   display: inline-block;
