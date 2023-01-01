@@ -1,7 +1,5 @@
+<%= render 'admin/shared/crud_menu', url: admin_items_path %>
 
-<%= link_to admin_items_path do%>
-  <%= image_tag 'back.png', size: "62x48" %>
-<% end %>
 <div class="bg-white container mx-auto shadow-lg rounded-lg max-w-md hover:shadow-2xl transition duration-300 my-3">
   <%=image_tag @item.image ,class: "w-auto mx-auto rounded-full object-cover object-center" %>
   <div class="p-6">
