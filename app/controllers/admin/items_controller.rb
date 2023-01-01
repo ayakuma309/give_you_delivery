@@ -13,7 +13,9 @@ class Admin::ItemsController < Admin::BaseController
 
   def create
     @item = Item.new(item_params)
+    tag_list = params[:item][:tag_name].split(',').uniq
     if @item.save
+      @item.save_tags(tag_list)
       redirect_to admin_items_path, success: t('defaults.message.created', item: Item.model_name.human)
     else
       flash.now[:danger] = t('defaults.message.not_created', item: Item.model_name.human)

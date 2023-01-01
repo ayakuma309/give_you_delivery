@@ -10,6 +10,9 @@ ja:
         password: 'パスワード'
         password_confirmation: 'パスワード確認'
         name: '名前'
+      item:
+        name: 'アイテム名'
+        tag_name: 'タグ'
       delivery:
         comment: 'メッセージ'
         addressee: '差し入れしたい人'
