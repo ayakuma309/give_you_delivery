@@ -1,0 +1,10 @@
+
+<%= link_to admin_items_path do%>
+  <%= image_tag 'back.png', size: "62x48" %>
+<% end %>
+<div class="bg-white container mx-auto shadow-lg rounded-lg max-w-md hover:shadow-2xl transition duration-300 my-3">
+  <%=image_tag @item.image ,class: "w-auto mx-auto rounded-full object-cover object-center" %>
+  <div class="p-6">
+    <h1 class="md:text-1xl text-xl hover:text-secondary transition duration-200  font-bold text-gray-900 "><%= @item.name %></h1>
+  </div>
+</div>

@@ -1,9 +1,11 @@
 class Admin::ItemsController < Admin::BaseController
-  before_action :set_item, only: %w[edit update destroy]
+  before_action :set_item, only: %i[show edit update destroy]
 
   def index
     @items = Item.all.order(created_at: :desc).page(params[:page])
   end
+
+  def show; end
 
   def new
     @item = Item.new
