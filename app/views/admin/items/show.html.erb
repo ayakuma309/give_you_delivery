@@ -8,3 +8,10 @@
     <h1 class="md:text-1xl text-xl hover:text-secondary transition duration-200  font-bold text-gray-900 "><%= @item.name %></h1>
   </div>
 </div>
+<div class="tag mt-5">
+  <% @item.tags.each do |tag| %>
+    <div class="tag_name">
+      <%= tag.name %>
+    </div>
+  <% end %>
+</div>

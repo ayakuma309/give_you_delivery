@@ -95,3 +95,21 @@ footer{
   font-size: 1rem;
 }
 
+/* Tag */
+.tag{
+  display: flex;
+}
+
+.tag_name{
+  margin: 0 .1em .6em 0;
+  padding: .6em;
+  line-height: 1;
+  text-decoration: none;
+  color: #333333;
+  background-color: #F8D1D9;
+  border: 1px solid #F8D1D9;
+  border-radius: 10px;
+}
+.tag_name:before {
+  content: "#";
+}
