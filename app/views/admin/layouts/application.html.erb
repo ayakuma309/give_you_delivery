@@ -12,15 +12,14 @@
     <%= javascript_importmap_tags %>
     <%= favicon_link_tag('logo.png') %>
   </head>
-
-  <body>
+  <body class="flex flex-col min-h-screen">
     <div class="wrapper">
 
       <%= render 'admin/shared/header'%>
-      <main class="container mx-auto mt-28 px-5">
+      <main class="container mx-auto mt-28 px-5 flex-grow">
         <%= render 'shared/flash_message'%>
         <%= yield %>
-      </div>
+      </main>
       <%= render 'admin/shared/footer'%>
     </div>
   </body>
