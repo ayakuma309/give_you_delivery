@@ -1,9 +1,15 @@
 module ApplicationHelper
   # 各ページのタイトル設定
-  def page_title(page_title = '')
-    base_title = 'お疲れ様です'
+  def page_title(page_title = '', admin: false)
+    base_title = if admin
+                  'お疲れ様です(管理画面)'
+                else
+                  'お疲れ様です'
+                end
     page_title.empty? ? base_title : "#{base_title}|#{page_title}"
   end
+
+
 
 
   def default_meta_tags
