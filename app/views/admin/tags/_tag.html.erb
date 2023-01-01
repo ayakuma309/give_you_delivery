@@ -1,0 +1,11 @@
+<tr>
+  <td>
+    <%= tag.name %>
+  </td>
+  <td>
+    <%= link_to "編集", edit_admin_tag_path(tag), class: "btn btn-primary" %>
+  </td>
+  <td>
+    <%= button_to "削除", admin_tag_path(tag), method: :delete , class: " btn" %>
+  </td>
+</tr>
