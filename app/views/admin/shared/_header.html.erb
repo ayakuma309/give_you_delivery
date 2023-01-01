@@ -19,8 +19,8 @@
     </div>
     <div class="navbar-end hidden lg:flex">
       <ul class="menu menu-horizontal p-0 mr-0 text-sm">
-        <li><%= link_to 'TOP', '#' %></li>
-        <li><%= link_to 'Item一覧',  '#' %></li>
+        <li><%= link_to 'TOP', admin_root_path %></li>
+        <li><%= link_to 'Item一覧',  admin_items_path %></li>
         <li><%= link_to '差し入れした一覧',  '#' %></li>
         <li><%= button_to (t 'defaults.logout'), admin_logout_path, class: 'dropdown-item', method: :delete %></li>
       </ul>

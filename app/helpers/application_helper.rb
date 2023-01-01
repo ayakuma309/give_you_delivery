@@ -9,9 +9,6 @@ module ApplicationHelper
     page_title.empty? ? base_title : "#{base_title}|#{page_title}"
   end
 
-
-
-
   def default_meta_tags
     {
       site: 'お疲れ様です',
