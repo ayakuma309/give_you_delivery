@@ -11,8 +11,8 @@
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
         </label>
         <ul tabindex="0" class="menu menu-conpact dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52 text-left">
-          <li><%= link_to 'ダッシュボード', '#' %></li>
-          <li><%= link_to 'Item一覧', '#'%></li>
+          <li><%= link_to 'ダッシュボード', admin_root_path %></li>
+          <li><%= link_to 'Item一覧', admin_items_path %></li>
           <li><%= button_to (t 'defaults.logout'), admin_logout_path, class: 'dropdown-item', method: :delete %></li>
         </ul>
       </div>
@@ -21,8 +21,7 @@
       <ul class="menu menu-horizontal p-0 mr-0 text-sm">
         <li><%= link_to 'TOP', admin_root_path %></li>
         <li><%= link_to 'Item一覧',  admin_items_path %></li>
-        <li><%= link_to '差し入れした一覧',  '#' %></li>
-        <li><%= button_to (t 'defaults.logout'), admin_logout_path, class: 'dropdown-item', method: :delete %></li>
+        <li><%= button_to (t 'defaults.logout'), admin_logout_path, method: :delete %></li>
       </ul>
     </div>
   </div>
