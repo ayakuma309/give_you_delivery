@@ -1,0 +1,10 @@
+<div class="card card-side bg-base-100 shadow-xl my-2">
+  <%=image_tag delivery.item.image ,class: "rounded-full"%>
+  <div class="card-body">
+    <h2 class="card-title"><%= delivery.addressee %>さん</h2>
+    <div class="font-bold"><%= delivery.item.name %></div>
+    <div class="card-actions justify-end">
+      <%= link_to '詳細', delivery_path(delivery) ,class: 'btn btn-primary'%>
+    </div>
+  </div>
+</div>

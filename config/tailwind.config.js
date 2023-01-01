@@ -25,12 +25,12 @@ module.exports = {
     themes: [
       {
         mytheme: {
-          primary: "#42A0FF",
-          secondary:  "#81D0CB",
-          accent: "#7dd3fc",
-          neutral: "#191A3E",
-          warning: "#fecaca",
-          info: "#FFDC5D",
+          primary: "#FAB4B5",
+          secondary:  "#F8D1D9",
+          accent: "#DF3419",
+          neutral: "#616161",
+          warning: "#fb7185",
+          info: "#fcf0f2",
           success: "#fef08a",
           "base-100": "#ffffff",
           fontFamily: "Chalkboard"

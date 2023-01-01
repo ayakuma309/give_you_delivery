@@ -2,12 +2,18 @@ ja:
   activerecord:
     models:
       user: 'ユーザー'
+      item: ’アイテム'
+      delivery: '差し入れ'
     attributes:
       user:
         email: 'メールアドレス'
         password: 'パスワード'
         password_confirmation: 'パスワード確認'
         name: '名前'
+      delivery:
+        comment: 'メッセージ'
+        addressee: '差し入れしたい人'
+        addresser: 'あなたのお名前'
   attributes:
     id: 'ID'
     created_at: '作成日時'

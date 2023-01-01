@@ -2,7 +2,7 @@
   <div class="navbar bg-primary">
     <div class="navbar-start">
       <%=link_to  root_path, class: "btn btn-ghost flex" do%>
-        LOGO
+        <%=image_tag 'logo-image.png', class: "mx-auto", size: "70x70"%>
       <% end %>
     </div>
     <div class="navbar-end">
@@ -13,6 +13,7 @@
         <ul tabindex="0" class="menu menu-conpact dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52 text-left">
           <li><%= link_to 'TOP', root_path %></li>
           <li><%= link_to 'Item一覧', items_path %></li>
+          <li><%= link_to '差し入れした一覧', deliveries_path %></li>
           <li><%= button_to (t 'defaults.logout'), logout_path, class: 'dropdown-item', method: :delete %></li>
         </ul>
       </div>
@@ -21,6 +22,7 @@
       <ul class="menu menu-horizontal p-0 mr-0 text-sm">
         <li><%= link_to 'TOP', root_path %></li>
         <li><%= link_to 'Item一覧', items_path %></li>
+        <li><%= link_to '差し入れした一覧', deliveries_path %></li>
         <li><%= button_to (t 'defaults.logout'), logout_path, class: 'dropdown-item', method: :delete %></li>
       </ul>
     </div>
