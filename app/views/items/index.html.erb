@@ -1,6 +1,6 @@
 <div>
   <h2 class="font-bold text-3xl">差し入れしたい商品を
-  <span class=" text-primary">1つ</span>
+  <span class=" text-warning">1つ</span>
   選んでください</h2>
   <% if @items.present? %>
     <%= render 'search_form', q: @q, url: items_path %>
