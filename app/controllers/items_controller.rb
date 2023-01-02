@@ -10,6 +10,7 @@ class ItemsController < ApplicationController
   end
 
   def search
+    @tags = Tag.all
     if (tag_name = params[:tag_name])
       @items = Item.with_tag(tag_name)
       @tag = Tag.find_by(name: tag_name)

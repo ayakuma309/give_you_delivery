@@ -101,11 +101,8 @@ body{
   padding: .6em;
   line-height: 1;
   text-decoration: none;
-  color: #333333;
-  background-color: #F8D1D9;
-  border: 1px solid #F8D1D9;
+  color: #590314;
+  background-color: #F8D2DA;
+  border: 1px solid #F8D2DA;
   border-radius: 10px;
-}
-.tag_name:before {
-  content: "#";
 }
