@@ -2,7 +2,7 @@
   <%=image_tag item.image ,class: "w-auto mx-auto rounded-full object-cover object-center" %>
   <div class="p-6">
     <h1 class="md:text-1xl text-xl hover:text-secondary transition duration-200  font-bold text-gray-900 "><%= item.name %></h1>
-    <%= link_to  '差し入れする' ,item_path(item), class: "text-gray-700 my-2 hover-text-900 btn btn-primary" %>
+    <%= link_to  '差し入れする' ,item_path(item), class: "my-2 hover-text-900 btn btn-primary" %>
   </div>
   <%= render 'tag', item: item %>
 </div>

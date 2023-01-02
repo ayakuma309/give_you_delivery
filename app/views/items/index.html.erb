@@ -1,17 +1,16 @@
 <div>
-  <h2 class="font-bold text-3xl">差し入れしたい商品を
-  <span class=" text-warning">1つ</span>
-  選んでください</h2>
-  <% if @items.present? %>
+  <div class="font-bold text-3xl">
+    差し入れアイテムを
+    <span class="text-warning">1つ</span>
+    選んでください
+  </div>
+  <div class="mx-auto">
     <%= render 'search_form', q: @q, url: items_path %>
-  <% else %>
-    <div class="my-3">
-      <%= link_to items_path ,class: "flex" do%>
-        <p class="btn btn-primary">
-          アイテムを選び直す
-        </p>
-      <% end %>
-      <p class="my-10">商品が見つかりませんでした</p>
+  </div>
+
+  <% if @items.blank? %>
+    <div class="my-10">
+      商品が見つかりませんでした
     </div>
   <% end %>
 </div>

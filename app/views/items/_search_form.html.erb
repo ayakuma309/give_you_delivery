@@ -1,8 +1,6 @@
 <%= search_form_for q, url: url do |f| %>
-  <div class="input-group my-3">
-    <%= f.search_field :name_cont, class: " bg-gray-50 text-gray-800 border focus:ring ring-indigo-300 rounded outline-none transition duration-100 px-3 py-2", placeholder: "商品名検索" %>
-    <div class="input-group-append">
-      <%= f.submit class: 'btn btn-primary ml-1' %>
-    </div>
+  <div class="input-group my-3 text-center">
+    <%= f.search_field :name_cont, class: " bg-gray-50 text-gray-800 border focus:ring ring-indigo-300 rounded outline-none transition duration-100 px-3 py-2", placeholder: "アイテム名検索" %>
+    <%= f.submit class: 'btn btn-primary' %>
   </div>
 <% end %>
