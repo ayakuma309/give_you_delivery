@@ -6,7 +6,12 @@
     <%= render 'search_form', q: @q, url: items_path %>
   <% else %>
     <div class="my-3">
-      商品が見つかりませんでした
+      <%= link_to items_path ,class: "flex" do%>
+        <p class="btn btn-primary">
+          アイテムを選び直す
+        </p>
+      <% end %>
+      <p class="my-10">商品が見つかりませんでした</p>
     </div>
   <% end %>
 </div>
