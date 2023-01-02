@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   get "oauth/:provider", to: "oauths#oauth", as: :auth_at_provider
 
   resources :items, only: %i[index show]
+  get 'search', to: 'items#search'
   resources :deliveries, only: %i[index show create edit update destroy]
 
 
@@ -25,6 +26,5 @@ Rails.application.routes.draw do
     delete 'logout', to: 'user_sessions#destroy'
     resources :items
     resources :tags, only: %i[index edit update destroy]
-
   end
 end

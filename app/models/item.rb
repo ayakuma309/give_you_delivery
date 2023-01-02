@@ -7,6 +7,9 @@ class Item < ApplicationRecord
   validates :name, presence: true
   validates :image, presence: true
 
+  #タグ
+  scope :with_tag, ->(tag_name) { joins(:tags).where(tags: { name: tag_name }) }
+	
   def save_tags(saveitem_tags)
     current_tags = self.tags.pluck(:name) unless self.tags.nil?
     old_tags = current_tags - saveitem_tags
