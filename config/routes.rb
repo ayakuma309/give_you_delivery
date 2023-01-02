@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root 'static_pages#top'
   get 'terms', to: 'static_pages#terms'
   get 'privacy', to: 'static_pages#privacy'
-  
+
   resources :users, only: %i[new create]
   get 'login', to: 'user_sessions#new'
   post 'login', to: 'user_sessions#create'
@@ -14,5 +14,17 @@ Rails.application.routes.draw do
   get "oauth/:provider", to: "oauths#oauth", as: :auth_at_provider
 
   resources :items, only: %i[index show]
+  get 'search', to: 'items#search'
   resources :deliveries, only: %i[index show create edit update destroy]
+
+
+  #admin
+  namespace :admin do
+    root to: 'dashboards#index'
+    get 'login', to: 'user_sessions#new'
+    post 'login', to: 'user_sessions#create'
+    delete 'logout', to: 'user_sessions#destroy'
+    resources :items
+    resources :tags, only: %i[index edit update destroy]
+  end
 end

@@ -1,0 +1,26 @@
+<%= render 'admin/shared/crud_menu', url: admin_items_path %>
+
+<div class="bg-info py-6 sm:py-8 lg:py-12">
+  <div class="max-w-screen-2xl px-4 md:px-8 mx-auto">
+    <div class="max-w-screen-md grid sm:grid-cols gap-4 mx-auto">
+      <%= form_with model: @item,url: admin_items_path, local: true  do |f| %>
+        <%= render 'shared/error_messages', object: f.object %>
+        <div>
+          <%= f.label :name , class: "inline-block text-gray-800 text-sm sm:text-base mb-2"%>
+          <%= f.text_field :name, class: "w-full bg-gray-50 text-gray-800 border focus:ring ring-indigo-300 rounded outline-none transition duration-100 px-3 py-2",placeholder: "アイテム名", required: true %>
+        </div>
+        <div>
+          <%= f.label :image, class: "inline-block text-gray-800 text-sm sm:text-base mb-2" %>
+          <%= f.text_field :image, class: "w-full bg-gray-50 text-gray-800 border focus:ring ring-indigo-300 rounded outline-none transition duration-100 px-3 py-2",placeholder: "imageURL" , required: true%>
+        </div>
+        <div>
+          <%= f.label :tag_name , class: "inline-block text-gray-800 text-sm sm:text-base mb-2" %>
+          <%= f.text_field :tag_name, value: @tag_list, class: "w-full bg-gray-50 text-gray-800 border focus:ring ring-indigo-300 rounded outline-none transition duration-100 px-3 py-2",placeholder: ",で区切って入力してください" %>
+        </div>
+        <div class="sm:col-span-2 flex justify-between items-center my-2">
+          <%= f.submit class: 'btn btn-primary'%>
+        </div>
+    <% end %>
+    </div>
+  </div>
+</div>

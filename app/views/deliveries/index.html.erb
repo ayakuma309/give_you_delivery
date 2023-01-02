@@ -1,7 +1,9 @@
 <div>
-  <h2 class="font-bold text-3xl">差し入れした一覧</h2>
+  <h2 class="font-bold text-3xl text-center">
+    差し入れした一覧
+  </h2>
 </div>
-<div class="container">
+<div class="w-80 my-10 mx-auto">
   <% if @deliveries.present? %>
     <%= render @deliveries %>
   <% else %>

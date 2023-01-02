@@ -11,14 +11,19 @@ ja:
     show: '詳細'
     delete: '削除'
     message:
+      require_login: 'ログインしてください'
+      created: "%{item}を作成しました"
+      not_created: "%{item}を作成できませんでした"
       updated: "%{item}を更新しました"
       not_updated: "%{item}を更新できませんでした"
       deleted: "%{item}を削除しました"
       delete_confirm: '削除しますか？'
       not_authorized: '権限がありません'
-      require_login: 'ログインしてください'
-      created: "%{item}を作成しました"
-      not_created: "%{item}を作成できませんでした"
+  enums:
+    user:
+      role:
+        general: '一般'
+        admin: '管理者'
   users:
     new:
       title: 'ユーザー登録'
@@ -36,6 +41,15 @@ ja:
       fail: 'ログインに失敗しました'
     destroy:
       success: 'ログアウトしました'
+  admin:
+    user_sessions:
+      new:
+        title: 'ログイン'
+      create:
+        success: 'ログインしました'
+        fail: 'ログインに失敗しました'
+      destroy:
+        success: 'ログアウトしました'
   deliveries:
     index:
       no_result: '差し入れしたものがありません'

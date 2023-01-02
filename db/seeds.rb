@@ -13,3 +13,9 @@ CSV.foreach('db/csv_data/item.csv', headers: true) do |row|
     image: row['image']
   )
 end
+
+User.create!(name:  "admin",
+  email: "admin@admin.com",
+  password:  "adminpassword",
+  password_confirmation: "adminpassword",
+  role: 1)

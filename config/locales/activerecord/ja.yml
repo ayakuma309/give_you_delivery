@@ -4,16 +4,22 @@ ja:
       user: 'ユーザー'
       item: ’アイテム'
       delivery: '差し入れ'
+      tag: 'タグ'
     attributes:
       user:
         email: 'メールアドレス'
         password: 'パスワード'
         password_confirmation: 'パスワード確認'
         name: '名前'
+      item:
+        name: 'アイテム名'
+        tag_name: 'タグ'
       delivery:
         comment: 'メッセージ'
         addressee: '差し入れしたい人'
         addresser: 'あなたのお名前'
+      tag:
+        name: 'タグ名'
   attributes:
     id: 'ID'
     created_at: '作成日時'

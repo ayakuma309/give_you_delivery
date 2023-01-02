@@ -8,4 +8,14 @@ class ItemsController < ApplicationController
     @item = Item.find(params[:id])
     @delivery = Delivery.new
   end
+
+  def search
+    @tags = Tag.all
+    if (tag_name = params[:tag_name])
+      @items = Item.with_tag(tag_name)
+      @tag = Tag.find_by(name: tag_name)
+    else
+      @items = Item.all.page(params[:page])
+    end
+  end
 end

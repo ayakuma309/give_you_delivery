@@ -18,7 +18,7 @@ class DeliveriesController < ApplicationController
     if @delivery.save
       redirect_to delivery_path(@delivery), success: t('defaults.message.created', item: Delivery.model_name.human)
     else
-      flash.now[:danger] = t('defaults.message.not_created', item: Delivery.model_name.human)
+      flash.now[:error] = t('defaults.message.not_created', item: Delivery.model_name.human)
       @items = Item.all
       render 'items/index'
     end
@@ -28,7 +28,7 @@ class DeliveriesController < ApplicationController
     if @delivery.update(delivery_params)
       redirect_to delivery_path(@delivery), success: t('defaults.message.updated', item: Delivery.model_name.human)
     else
-      flash.now[:danger] = t('defaults.message.not_updated', item: Delivery.model_name.human)
+      flash.now[:error] = t('defaults.message.not_updated', item: Delivery.model_name.human)
       render :edit
     end
   end
