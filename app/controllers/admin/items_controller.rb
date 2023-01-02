@@ -18,7 +18,7 @@ class Admin::ItemsController < Admin::BaseController
       @item.save_tags(tag_list)
       redirect_to admin_items_path, success: t('defaults.message.created', item: Item.model_name.human)
     else
-      flash.now[:danger] = t('defaults.message.not_created', item: Item.model_name.human)
+      flash.now[:error] = t('defaults.message.not_created', item: Item.model_name.human)
       render :new
     end
   end
@@ -33,7 +33,7 @@ class Admin::ItemsController < Admin::BaseController
       @item.save_tags(tag_list)
       redirect_to admin_items_path, success: t('defaults.message.updated', item: Item.model_name.human)
     else
-      flash.now[:danger] = t('defaults.message.not_updated', item: Item.model_name.human)
+      flash.now[:error] = t('defaults.message.not_updated', item: Item.model_name.human)
       render :edit
     end
   end

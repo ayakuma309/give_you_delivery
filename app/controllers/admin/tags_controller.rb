@@ -11,7 +11,7 @@ class Admin::TagsController < Admin::BaseController
     if @tag.update(tag_params)
       redirect_to admin_tags_path, success: t('defaults.message.updated', item: Tag.model_name.human)
     else
-      flash.now[:danger] = t('defaults.message.not_created', item: Tag.model_name.human)
+      flash.now[:error] = t('defaults.message.not_created', item: Tag.model_name.human)
       render :edit
     end
   end
