@@ -31,14 +31,14 @@
   </div>
 </div>
 
-
-<div class="text-center my-3">
-  <input type="button" class= "btn btn-primary my-3" value="URLコピー" id="btnShowBox" onclick="copyUrl()">
-</div>
-<p id="temporaryBox" style="display: none;" class= "text-center text-accent">
-  URLはコピーされました<br>
-</p>
-
+<% if logged_in? && current_user.mine?(@delivery) %>
+  <div class="text-center my-3">
+    <input type="button" class= "btn btn-primary my-3" value="URLコピー" id="btnShowBox" onclick="copyUrl()">
+  </div>
+  <p id="temporaryBox" style="display: none;" class= "text-center text-accent">
+    URLはコピーされました<br>
+  </p>
+<% end %>
 <script>
   function copyUrl() {
     var url = location.href;
