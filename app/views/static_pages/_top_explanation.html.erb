@@ -1,0 +1,53 @@
+<section>
+	<div class="container px-6 pt-14 pb-4 mx-auto">
+		<div class="text-xl font-semibold text-center lg:text-2xl">
+			差し入れの仕方
+    </div>
+  </div>
+	<div class="grid grid-cols-1 gap-2 mt-4 xl:mt-6 xl:gap-3 md:grid-cols-2 sm:mx-14">
+		<div class="flex flex-col items-center mx-5 mb-5 p-6 space-y-3 text-center bg-white rounded-xl shadow-md shadow-indigo-900/10 bg-base-100">
+      <span class="inline-block p-3 text-warning text-2xl">
+        1.
+      </span>
+			<h1 class="text-xl capitalize">
+				アイテムを選んで<br>
+        「差し入れする」をクリック
+      </h1>
+			<figure>
+				<%= image_tag 'top_explanation1.png', class:"mt-2 w-48"%>
+      </figure>
+    </div>
+  </div>
+
+	<div class="grid grid-cols-1 gap-2 mt-4 xl:mt-6 xl:gap-3 md:grid-cols-2 sm:mx-14">
+		<div class="flex flex-col items-center mx-5 mb-5 p-6 space-y-3 text-center bg-white rounded-xl shadow-md shadow-indigo-900/10 bg-base-100">
+			<span class="inline-block p-3 text-warning text-2xl">
+        2.
+      </span>
+			<h1 class="text-xl capitalize">
+				各項目を入力する
+      </h1>
+			<figure>
+				<%= image_tag 'top_explanation2.png', class:"mt-2 w-48"%>
+      </figure>
+    </div>
+  </div>
+
+	<div class="grid grid-cols-1 gap-2 mt-4 xl:mt-6 xl:gap-3 md:grid-cols-2 sm:mx-14">
+		<div class="flex flex-col items-center mx-5 mb-5 p-6 space-y-3 text-center bg-white rounded-xl shadow-md shadow-indigo-900/10 bg-base-100">
+			<span class="inline-block p-3 text-warning text-2xl">
+        3.
+      </span>
+			<h1 class="text-xl capitalize">
+				「URLコピー」をクリックして<br>
+        相手のtimesに投稿する
+      </h1>
+			<figure>
+				<%= image_tag 'top_explanation3.png', class:"mt-2 w-48"%>
+      </figure>
+    </div>
+  </div>
+</section>
+<div class="sm:col-span-2 p-2  text-center">
+  <%= link_to '差し入れアイテムを探しにいく', items_path, class: 'btn btn-primary', style: 'color: white' %>
+</div>
