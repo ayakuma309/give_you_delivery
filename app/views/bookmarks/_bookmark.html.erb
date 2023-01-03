@@ -5,12 +5,8 @@
       <h2 class="card-title"><%= bookmark.addressee %></h2>
       <div class= "my-2">
         <div class="text-center">
-          <div class="balloon">
-            <p class="font-bold text-xs">
-              <%= bookmark.comment %>
-            </p>
-          </div>
-          <div class="font-bold text-center">
+          <%= link_to 'メッセージ詳細', delivery_path(bookmark) ,class: "btn btn-primary"%>
+          <div class="font-bold text-center mt-10">
             <%=image_tag 'logo.png', class: "mx-auto",size: "100x100"%>
             <%= bookmark.addresser %>より
           </div>
