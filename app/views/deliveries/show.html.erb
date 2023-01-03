@@ -1,5 +1,3 @@
-<!--ここでloginしてたら一覧へ戻る、ログインしてなかったらあなたも差し入れしてみるボタンを表示する-->
-<!--ここで書いた本人だったら編集、なかったら保存ボタン(お気に入り)を表示する-->
 <% set_meta_tags title: 'お疲れ様です！', description: "#{@delivery.addresser}さんから差し入れが届いています"%>
 
 <% if logged_in? && current_user.mine?(@delivery) %>
@@ -31,28 +29,4 @@
   </div>
 </div>
 
-<% if logged_in? && current_user.mine?(@delivery) %>
-  <div class="text-center my-3">
-    <input type="button" class= "btn btn-primary my-3" value="URLコピー" id="btnShowBox" onclick="copyUrl()">
-  </div>
-  <p id="temporaryBox" style="display: none;" class= "text-center text-accent">
-    URLはコピーされました<br>
-  </p>
-<% end %>
-
-<%= render 'bookmarks/bookmark_button', delivery: @delivery %>
-
-<script>
-  function copyUrl() {
-    var url = location.href;
-    navigator.clipboard.writeText(url);
-    document.getElementById("temporaryBox").style.display = "block"; // ボックスを表示
-    timerId = setTimeout( closeBox , 3000 ); // タイマーを開始
-    document.getElementById("btnShowBox").disabled = true; // 表示用ボタンを無効化
-  }
-  function closeBox() {
-   document.getElementById("temporaryBox").style.display = "none"; // ボックスを消す
-   document.getElementById("btnShowBox").disabled = false; // 表示用ボタンを有効化
-}
-
-</script>
+<%= render 'buttons', delivery: @delivery%>
