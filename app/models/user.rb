@@ -20,4 +20,8 @@ class User < ApplicationRecord
   def mine?(object)
     object.user_id == id
   end
+
+  def bookmark?(delivery)
+    bookmark_deliveries.include?(delivery)
+  end
 end
