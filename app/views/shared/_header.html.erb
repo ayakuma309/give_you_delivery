@@ -15,6 +15,7 @@
           <li><%= link_to 'TOP', root_path %></li>
           <li><%= link_to 'Item一覧', items_path %></li>
           <li><%= link_to '差し入れした一覧', deliveries_path %></li>
+          <li><%= link_to '保存した差し入れ', bookmarks_path %></li>
           <li><%= button_to (t 'defaults.logout'), logout_path, class: 'dropdown-item', method: :delete %></li>
         </ul>
       </div>
@@ -24,6 +25,7 @@
         <li><%= link_to 'TOP', root_path %></li>
         <li><%= link_to 'Item一覧', items_path %></li>
         <li><%= link_to '差し入れした一覧', deliveries_path %></li>
+        <li><%= link_to '保存した差し入れ', bookmarks_path %></li>
         <li><%= button_to (t 'defaults.logout'), logout_path, class: 'dropdown-item', method: :delete %></li>
       </ul>
     </div>
