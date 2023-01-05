@@ -5,6 +5,8 @@ class User < ApplicationRecord
   accepts_nested_attributes_for :authentications
 
   has_many :deliveries, dependent: :destroy
+  has_many :bookmarks, dependent: :destroy
+  has_many :bookmark_deliveries, through: :bookmarks, source: :delivery
 
   validates :password, length: { minimum: 3 }, if: -> { new_record? || changes[:crypted_password] }
   validates :password, confirmation: true, if: -> { new_record? || changes[:crypted_password] }
@@ -17,5 +19,9 @@ class User < ApplicationRecord
 
   def mine?(object)
     object.user_id == id
+  end
+
+  def bookmark?(delivery)
+    bookmark_deliveries.include?(delivery)
   end
 end

@@ -1,0 +1,17 @@
+<div class="mx-auto w-80">
+  <div class="card card-side bg-base-100 shadow-xl my-2">
+    <%=image_tag bookmark.item.image ,class: "rounded-full px-3 py-3"%>
+    <div class="card-b pt-10 px-3">
+      <h2 class="card-title"><%= bookmark.addressee %></h2>
+      <div class= "my-2">
+        <div class="text-center">
+          <%= link_to 'メッセージ詳細', delivery_path(bookmark) ,class: "btn btn-primary"%>
+          <div class="font-bold text-center mt-10">
+            <%=image_tag 'logo.png', class: "mx-auto",size: "100x100"%>
+            <%= bookmark.addresser %>より
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

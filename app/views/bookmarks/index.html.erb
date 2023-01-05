@@ -1,0 +1,12 @@
+<div>
+  <h2 class="font-bold text-xl text-center">
+    保存した差し入れ
+  </h2>
+</div>
+<div class="w-80 my-10 mx-auto">
+  <% if @bookmarks.present? %>
+    <%= render partial: 'bookmarks/bookmark', collection: @bookmarks %>
+  <% else %>
+    <p class= "text-center"><%= t('.no_result') %></p>
+  <% end %>
+</div>

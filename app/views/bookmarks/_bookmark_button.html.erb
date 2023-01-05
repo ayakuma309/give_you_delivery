@@ -1,0 +1,5 @@
+<% if current_user.bookmark?(delivery) %>
+  <%= render 'bookmarks/unbookmark_delivery', delivery: delivery%>
+<% else %>
+  <%= render 'bookmarks/bookmark_delivery', delivery: delivery%>
+<% end %>

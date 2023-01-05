@@ -53,3 +53,6 @@ ja:
   deliveries:
     index:
       no_result: '差し入れしたものがありません'
+  bookmarks:
+    index:
+      no_result: '保存した差し入れがありません'

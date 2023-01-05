@@ -15,7 +15,10 @@ Rails.application.routes.draw do
 
   resources :items, only: %i[index show]
   get 'search', to: 'items#search'
-  resources :deliveries, only: %i[index show create edit update destroy]
+  resources :deliveries, only: %i[index show create edit update destroy] do
+    resource :bookmark, only: %i[create destroy]
+  end
+  resources :bookmarks, only: %i[index]
 
 
   #admin

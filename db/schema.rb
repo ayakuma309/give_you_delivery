@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_01_094457) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_03_020641) do
   create_table "authentications", force: :cascade do |t|
     t.integer "user_id", null: false
     t.string "provider", null: false
@@ -18,6 +18,16 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_01_094457) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["provider", "uid"], name: "index_authentications_on_provider_and_uid"
+  end
+
+  create_table "bookmarks", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "delivery_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["delivery_id"], name: "index_bookmarks_on_delivery_id"
+    t.index ["user_id", "delivery_id"], name: "index_bookmarks_on_user_id_and_delivery_id", unique: true
+    t.index ["user_id"], name: "index_bookmarks_on_user_id"
   end
 
   create_table "deliveries", force: :cascade do |t|
@@ -66,6 +76,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_01_094457) do
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
+  add_foreign_key "bookmarks", "deliveries"
+  add_foreign_key "bookmarks", "users"
   add_foreign_key "deliveries", "items"
   add_foreign_key "deliveries", "users"
   add_foreign_key "item_tags", "items"
