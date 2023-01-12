@@ -3,10 +3,18 @@
     保存した差し入れ
   </h2>
 </div>
-<div class="w-80 my-10 mx-auto">
-  <% if @bookmarks.present? %>
-    <%= render partial: 'bookmarks/bookmark', collection: @bookmarks %>
-  <% else %>
-    <p class= "text-center"><%= t('.no_result') %></p>
-  <% end %>
+
+<div class="rounded-lg bg-info min-h-screen py-10 px-10 ">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-x-10 xl-grid-cols-4 gap-y-10 gap-x-6 ">
+    <% if @bookmarks.present? %>
+      <%= render partial: 'bookmarks/bookmark', collection: @bookmarks %>
+    <% else %>
+      <p class= "text-center"><%= t('.no_result') %></p>
+    <% end %>
+  </div>
 </div>
+<ul class='crud-menu-btn list-inline text-center my-3'>
+  <li class="list-inline-item">
+    <%= link_to '差し入れする',items_path,class: "btn btn-primary"%>
+  </li>
+</ul>
