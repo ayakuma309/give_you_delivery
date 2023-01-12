@@ -3,9 +3,10 @@
 <% if logged_in? && current_user.mine?(@delivery) %>
   <%= render 'crud_menus', delivery: @delivery %>
 <% end %>
+
 <div class="mx-auto w-80">
   <div class="card card-side bg-base-100 shadow-xl my-2">
-    <%=image_tag @delivery.item.image,class: "rounded-full px-3 py-3"%>
+    <%=image_tag @delivery.item.image,class: "rounded-full px-3 py-3",size: "150x200"%>
     <div class="card-b pt-10 px-3">
       <h2 class="card-title"><%= @delivery.addressee %></h2>
       <p class= "my-2">
